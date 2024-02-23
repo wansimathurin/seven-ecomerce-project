@@ -22,7 +22,7 @@ function getProducts() {
             </div>
             <button class="addToCart">Add to basket</button>
         </div>`
-      })
+      }).join(" ")
     });
 }
 getProducts();
