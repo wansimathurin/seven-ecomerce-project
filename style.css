@@ -6,6 +6,73 @@
     font-family: sans-serif;
 
 }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.centerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.owl-carousel {
+    /* padding-left: 10px; */
+    position: relative;
+    /* background-color: aquamarine; */
+}
+.owl-carousel .owl-nav {
+    background-color: red !important;
+}
+.owl-carousel .owl-nav .owl-next {
+    color: #fff !important;
+    height: 98% !important;
+    width: 30px !important;
+    background-color:transparent !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 1s;
+
+}
+
+.owl-carousel .owl-nav .owl-prev {
+    color: hsl(0, 0%, 100%) !important;
+    height: 98% !important;
+    width: 30px !important;
+    background-color: transparent !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+.owl-carousel .owl-nav .owl-prev:hover{
+    background-color: rgba(0, 0, 0, 0.247)  !important;
+}
+.owl-carousel .owl-nav .owl-next:hover{
+    background-color: rgba(0, 0, 0, 0.247)  !important;
+}
+.owl-prev span,
+.owl-next span {
+    font-size: 30px !important;
+    
+}
+
+.owl-carousel .item {
+    height: 700px;
+    width: 100%;
+    /* margin-right: 5px; */
+}
+
+.owl-carousel .item img {
+    object-fit: cover;
+}
+/*===============
+================
+*/
 .content-center{
     display: flex;
     align-items: center;
