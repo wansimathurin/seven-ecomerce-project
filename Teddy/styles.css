@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #eff2f1;
+  color: #6a6a6a;
+}
+
+.add_product {
+  width: 100%;
+  height: max-content;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 85%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 48px;
+  text-align: center;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: max-content;
+}
+
+.form_container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  gap: 50px;
+}
+
+.left {
+  width: 45%;
+}
+
+.form_group {
+  margin-bottom: 20px;
+}
+
+.row {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  gap: 80px;
+}
+
+.form_control {
+  height: 50px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 6px 12px;
+  border: 0.6px solid rgb(206, 212, 218);
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+.right {
+  width: 50%;
+}
+
+.image_preview {
+  background-color: white;
+  border-radius: 10px;
+  border: 0.6px solid rgb(206, 212, 218);
+  width: 100%;
+  min-height: 250px;
+}
+
+/* button */ 
+
+.button_container {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  display: inline-block;
+  color: white;
+  background-color: black;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+.form_group.success input {
+	border-color: #2ecc71;
+}
+
+.form_group.error input {
+	border-color: #e74c3c;
+}
+
+.form_group small {
+  color: red;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.form_group.error small {
+  visibility: visible;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .container {
+        width: 75%;
+    }
+
+    .form_container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width: 525px) {
+
+    .row {
+        height: auto;
+        flex-wrap: wrap;
+        gap: unset;
+    }
+
+    .row .form_group {
+        width: 100%;
+    }
+
+}
