@@ -1,4 +1,5 @@
 // api integration
+
 var container = document.querySelector('.card-container');
 function getProducts() {
   fetch("https://fakestoreapi.com/products")
@@ -22,10 +23,28 @@ function getProducts() {
             </div>
             <button class="addToCart">Add to basket</button>
         </div>`
-      })
+      }).join(" ") 
+    });
+};
+getProducts();
+
+var categories = document.querySelector('.footer-navbar');
+function getCategories() {
+  fetch("https://fakestoreapi.com/products/categories")
+    .then((result) => result.json())
+    .then((products) => {
+      categories.innerHTML = products.map(categories=>{
+        return `<div class="footer-navbar">
+        <ul>
+            <li class="categories">${categories}</li>
+        </ul>
+      </div>`
+      }).join(" ") 
     });
 }
-getProducts();
+getCategories();
+
+
 
 // TODO: HAMBERGER MENU
 
@@ -39,11 +58,11 @@ hmbgMenu.addEventListener('click', function() {
 // TODO: Afficher la barre de recherche dans le hamburger menu
 
 var searchMenu = document.querySelector('div.search-logo i.fa-solid');
-var divBox = document.querySelector('div.hmbg-search');
+var divBox = document.querySelector('div.toggle-search-bar');
 
 searchMenu.addEventListener('click', function() {
-  divBox.classList.toggle('show-hmbg-search');
-})
+  divBox.classList.toggle('show-search-bar');
+});
 
 // TODO: Changement de themes
 
