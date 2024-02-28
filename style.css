@@ -1,57 +1,96 @@
-*{
-    border: none;
-    margin: none;
-    padding: none;
-    outline: none;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: sans-serif;
-
 }
-.content-center{
+.content-center {
     display: flex;
-    align-items: center;
     justify-content: center;
-   
+    align-items: center;
 }
-
-.card-container{
+body {
+    background-color: rgb(36, 50, 67);
+    height: fit-content;
     width: 100%;
-    height: 100%;
-    /* padding: 20px; */
-    background-color: #E5E7EB;
+}
+.card-container {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #E5E7E6;
     flex-wrap: wrap;
 }
 
-.card{
-  position: relative;
-  padding: 20px;
-  background: #fff;
-  flex-direction: column;
-  margin: 10px;
-  width: 300px;
-  height: 500px;
+.card {
+    position: relative;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    /* height: 400px; */
 }
 
-.card .image-content{
-  height: 50%;
-  width: 100%;
-  overflow: hidden;
+.card .img-contain {
+    height: 200px;
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden;
 }
 
-.card .image-content img{
+.card .img-contain img {
     object-fit: contain;
 }
+.desc {
+    padding: 20px 0;
+}
+.men{
+    color: grey;
+    font-weight: 200;
+    font-size: 10px;
+    margin-left: 70%;
+    margin-top: 0;
+}
 
-.fa-star{
+.fa-star {
     color: gold;
+    padding: 10px 0;
 }
-.addToCart{
-    height: 40px;
+h3 {
+    padding: 10px 0;
+}
+.addToCard {
     width: 100%;
-    background-color: #FCC93E;
+    height: 40px;
+    margin: auto;
+    background-color: gold;
     color: #fff;
+    border: none;
     font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
 }
-
-/* .desc{
-    padding: 10px;
-} */
+.categories {
+    display: flex;
+    padding: 2em;
+    gap: 1em;
+    align-items: center;
+    font-size: 15px;
+    
+}
+.categories p {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: sans-serif;
+}
+.fa-bars{
+    transform: translateY(1px);
+    color: white;
+}
+.categories p:hover {
+    text-decoration: underline;
+}
