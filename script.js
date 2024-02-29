@@ -16,9 +16,6 @@ function popClose(){
     popUpCard.style.display = "none";
 }
 
-//  shoWPopUp.addEventListener('click', ()=>{
-//     popUpCard.style.display = "block";
-// })
 
 //looping through cards 
 
@@ -57,8 +54,17 @@ function popMenu() {
                     headTitle.innerText = products[i].title;
                     description.innerHTML = products[i].description;
                     price.innerHTML = products[i].price + "XAF";
+
+                    //calling the image to display
+                    
+                    shoWPopUp.addEventListener('click', ()=>{
+                        popUpCard.style.display = "block";
+                        show.src = products[i].image;
+                    })
+                    
                 });
                 console.log(products[i]);
+
             })
 
 
