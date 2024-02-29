@@ -93,7 +93,7 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    gap: 70%;
+    gap: 80%;
 
     & .btn {
         font-size: 50px;
@@ -110,15 +110,7 @@
         border-radius: 30%;
     }
 
-    & .next {
-        position: absolute;
-        left: 800px;
-    }
-
-    & .prev {
-        position: absolute;
-        left: 60px;
-    }
+ 
 }
 
 .fa-star {
