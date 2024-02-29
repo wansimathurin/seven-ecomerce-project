@@ -1,57 +1,207 @@
-*{
-    border: none;
-    margin: none;
-    padding: none;
-    outline: none;
-    font-family: sans-serif;
 
-}
-.content-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
+
+/* PopUp */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    /* font-family: Poppins; */
+    /* outline: 1px solid black; */
 }
 
-.card-container{
-    width: 100%;
-    height: 100%;
-    /* padding: 20px; */
-    background-color: #E5E7EB;
-    flex-wrap: wrap;
+body {
+    position: relative;
 }
 
-.card{
-  position: relative;
-  padding: 20px;
-  background: #fff;
-  flex-direction: column;
-  margin: 10px;
-  width: 300px;
-  height: 500px;
-}
 
-.card .image-content{
-  height: 50%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.card .image-content img{
-    object-fit: contain;
-}
-
-.fa-star{
-    color: gold;
-}
-.addToCart{
-    height: 40px;
-    width: 100%;
-    background-color: #FCC93E;
-    color: #fff;
-    font-size: 20px;
-}
-
-/* .desc{
-    padding: 10px;
+/* .container {
+    height: 100vh;
+    width: 98vw;
+    background-color: #0000007a;
+    position: absolute;
+    transition: all 2s linear;
+    z-index: 2;
 } */
+
+.popParent {
+    width: 66%;
+    height: auto;
+    background-color: rgb(228, 207, 138);
+    position: absolute;
+    z-index: 7;
+    left: 18%;
+    top: 10px;
+    padding-top: 10px;
+    border-radius: 6px;
+
+    & .displayPop {
+        width: 100%;
+        height: 60%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .imPop {
+            width: 40%;
+            height: 100%;
+            /* background-color: brown; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: relative;
+
+            & h5 {
+                position: absolute;
+                top: 5px;
+                right: 30px;
+            }
+
+            & .imgSet {
+                width: 80%;
+                height: 340px;
+                /* background-color: aliceblue; */
+                overflow: hidden;
+                border-radius: 5px;
+                margin-top: 30px;
+
+            }
+        }
+
+        & .navPop {
+            width: 60%;
+            height: 100%;
+            /* background-color: chocolate; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+    }
+
+    & .scrollPop {
+        width: 100%;
+        height: 38%;
+        /* background-color: blueviolet; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 2%;
+        overflow: hidden;
+
+        /* transition: all 3s linear; */
+        & .card {
+            margin: 10px 10px;
+            height: 100%;
+            width: 50%;
+            /* background-color: aquamarine; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+                width: 200px;
+                height: 200px;
+                border-radius: 5px;
+
+            }
+        }
+    }
+}
+
+.nav {
+    position: absolute;
+
+    & .btn {
+        font-size: 50px;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.377);
+        }
+    }
+
+    & .fa {
+        transform: translateY(-140px);
+        margin: auto;
+        color: coral;
+        border-radius: 30%;
+    }
+
+    & .next {
+        position: absolute;
+        left: 800px;
+    }
+
+    & .prev {
+        position: absolute;
+        left: 60px;
+    }
+}
+
+.fa-star {
+    color: rgb(255, 220, 23);
+    display: inline;
+}
+
+.price {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+    background-color: rgba(255, 238, 0, 0.575);
+    border-radius: 6px;
+    margin: auto;
+    margin-top: 15px;
+    color: #fff;
+    align-self: center;
+}
+
+/* fonts */
+
+.detailsSet {
+    margin-left: 20px;
+    margin-right: 25px;
+    max-width: 500px;
+    overflow: auto;
+
+    p {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 10px 0;
+        font-family: Poppins;
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 30px;
+        font-family: Poppins;
+        color: #fff;
+    }
+
+    h5 {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 30px;
+        font-family: Poppins;
+        color: #fff;
+    }
+
+}
+
+.levels {
+    font-size: 18px;
+    font-family: Poppins;
+    color: #a19f9f;
+}
+
+.levels:hover {
+    background-color: rgb(240, 213, 93);
+    width: 100px;
+    height: 20px;
+    border-radius: 3px;
+}
