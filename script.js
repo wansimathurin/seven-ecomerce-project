@@ -10,18 +10,15 @@ var description = document.querySelector('.description');
 var category = document.querySelector('.levels');
 var close = document.querySelector('.fa-times');
 var popUpCard = document.querySelector('.container');
-var shoWPopUp = document.querySelector('.card');
+var shoWPopUp = document.querySelectorAll('.card');
 
 function popClose(){
     popUpCard.style.display = "none";
 }
 
-function popShow(){
-    // popUpCard.style.display = "block";
-}
-// calling the function
-
-document.addEventListener('click', popShow, false)
+//  shoWPopUp.addEventListener('click', ()=>{
+//     popUpCard.style.display = "block";
+// })
 
 //looping through cards 
 
