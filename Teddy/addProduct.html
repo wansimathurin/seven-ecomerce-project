@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add a new product to the website for sale</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
     <section class="add_product">
         <section class="container">
@@ -16,45 +18,56 @@
                     <section class="left">
                         <div class="form_group">
                             <label for="p_name">Name / Title</label>
-                            <input type="text" class="form_control" id="p_name">
+                            <input type="text" class="form_control" id="p_name" />
                             <small>error message</small>
                         </div>
                         <div class="row">
                             <div class="form_group">
                                 <label for="price">Price</label>
-                                <input type="text" class="form_control" id="price">
+                                <input type="text" class="form_control" id="price" />
                                 <small>error message</small>
                             </div>
                             <div class="form_group">
                                 <label for="qtt">Quantity</label>
-                                <input type="text" class="form_control" id="qtt">
+                                <input type="text" class="form_control" id="qtt" />
                                 <small>error message</small>
                             </div>
                         </div>
                         <div class="form_group">
                             <label for="message">Description</label>
-                            <textarea name="message" type="text" class="form_control" id="message" cols="30" rows="10" placeholder="Write about your product..."></textarea>
+                            <input type="text" name="" style="display: none;" id="">
+                            <textarea name="message" type="text" class="form_control" id="message" cols="30" rows="10"
+                                placeholder="Write about your product..."></textarea>
                             <small>error message</small>
                         </div>
                     </section>
                     <section class="right">
                         <div class="form_group">
-                            <label for="image">Enter image link</label>
-                            <input type="url" class="form_control" id="image">
+                            <p>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                                    style="display: none" />
+                            </p>
+                            <button>
+                                <label for="file" style="cursor: pointer">Upload Image</label>
+                            </button>
+                            <span>or</span>
+                            <div class="link_container">
+                                <input type="text" class="form_control image_link" id="image_link" placeholder="Paste URL"/>
+                                <button class="button_preview">Preview</button>
+                            </div>
                         </div>
-                        <div class="image_preview" >
-    
+                        <div class="image_preview">
+                            <img id="output" />
                         </div>
                     </section>
                 </section>
                 <div class="button_container">
-                    <button>
-                        Add Product
-                    </button>
+                    <button>Add Product</button>
                 </div>
             </form>
         </section>
     </section>
     <script src="./script.js"></script>
 </body>
+
 </html>
