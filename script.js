@@ -22,12 +22,11 @@ function getProducts() {
             </div>
             <button class="addToCart">Add to basket</button>
         </div>`
-      })
+      }).join(" ")
     });
 }
 getProducts();
 
-// TODO: HAMBERGER MENU
 
 var hmbgMenu = document.querySelector('.hmgr-img');
 var hmbgBox = document.querySelector('.hmbg-menu');
@@ -106,3 +105,29 @@ if (getStore === "WHITE") {
     document.querySelector('.cart-shopping i').style.color = '#fff';
     document.querySelector('.img-logo img').src = '/image/Amazon-Logo-Font-1-scaled.webp';
 }
+
+
+//carousel
+$(document).ready(function(){
+  //setup owlcarousel
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      dots:true,
+    autoplay:true,
+    autoplayTimeout:5000,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items:1
+          }
+      }
+  })
+})
+
