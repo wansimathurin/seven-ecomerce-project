@@ -7,7 +7,21 @@ var show = document.querySelector('.show');
 var headTitle = document.querySelector('.title');
 var price = document.querySelector('.price');
 var description = document.querySelector('.description');
-var category = document.querySelector('.levels')
+var category = document.querySelector('.levels');
+var close = document.querySelector('.fa-times');
+var popUpCard = document.querySelector('.container');
+var shoWPopUp = document.querySelector('.card');
+
+function popClose(){
+    popUpCard.style.display = "none";
+}
+
+function popShow(){
+    // popUpCard.style.display = "block";
+}
+// calling the function
+
+document.addEventListener('click', popShow, false)
 
 //looping through cards 
 

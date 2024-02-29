@@ -6,37 +6,21 @@
 ::before,
 ::after {
     box-sizing: border-box;
-    /* font-family: Poppins; */
     /* outline: 1px solid black; */
 }
 
-body {
-    position: relative;
-}
-
-
-/* .container {
-    height: 100vh;
-    width: 98vw;
-    background-color: #0000007a;
-    position: absolute;
-    transition: all 2s linear;
-    z-index: 2;
-} */
-
 .popParent {
-    width: 66%;
+    width: 75%;
     height: auto;
     background-color: rgb(228, 207, 138);
     position: absolute;
     z-index: 7;
-    left: 18%;
+    left: 13%;
     top: 10px;
     padding-top: 10px;
     border-radius: 6px;
 
     & .displayPop {
-        width: 100%;
         height: 60%;
         margin: 10px;
         display: flex;
@@ -44,9 +28,8 @@ body {
         align-items: center;
 
         & .imPop {
-            width: 40%;
+            width: 42%;
             height: 100%;
-            /* background-color: brown; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -62,7 +45,6 @@ body {
             & .imgSet {
                 width: 80%;
                 height: 340px;
-                /* background-color: aliceblue; */
                 overflow: hidden;
                 border-radius: 5px;
                 margin-top: 30px;
@@ -73,7 +55,6 @@ body {
         & .navPop {
             width: 60%;
             height: 100%;
-            /* background-color: chocolate; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -82,9 +63,8 @@ body {
     }
 
     & .scrollPop {
-        width: 100%;
+        width: 97%;
         height: 38%;
-        /* background-color: blueviolet; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -92,18 +72,16 @@ body {
         margin-top: 2%;
         overflow: hidden;
 
-        /* transition: all 3s linear; */
         & .card {
-            margin: 10px 10px;
+            margin: 10px 16px;
             height: 100%;
-            width: 50%;
-            /* background-color: aquamarine; */
+            width: 53%;
             display: flex;
             justify-content: center;
             align-items: center;
 
             & img {
-                width: 200px;
+                width: 219px;
                 height: 200px;
                 border-radius: 5px;
 
@@ -113,7 +91,9 @@ body {
 }
 
 .nav {
-    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 70%;
 
     & .btn {
         font-size: 50px;
@@ -144,6 +124,11 @@ body {
 .fa-star {
     color: rgb(255, 220, 23);
     display: inline;
+}
+
+.fa-times {
+    position: absolute;
+    right: 20px;
 }
 
 .price {
