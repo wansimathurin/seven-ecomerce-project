@@ -13,12 +13,12 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1em;
   transition: .4s;
-
+}
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+
 }
 
 
@@ -84,7 +84,7 @@ body {
 ================
 */
 
-}
+
 
 .products-carousel,
 .right-products {
@@ -342,7 +342,7 @@ body {
 
 .w-products .right div{
   max-width: 100% !important;
-
+}
 /* todo: NAVBAR START */
 
 div.navbar {
@@ -784,6 +784,7 @@ li.cart-shopping p {
     }
 
 }
+
 
 @media screen and (max-width:500px) {
  *{

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a new product to the website for sale</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <section class="add_product">
+        <section class="container">
+            <p class="heading">Add Products</p>
+            <form action="" class="form">
+                <section class="form_container">
+                    <section class="left">
+                        <div class="form_group">
+                            <label for="p_name">Name / Title</label>
+                            <input type="text" class="form_control" id="p_name" />
+                            <small>error message</small>
+                        </div>
+                        <div class="row">
+                            <div class="form_group">
+                                <label for="price">Price</label>
+                                <input type="text" class="form_control" id="price" />
+                                <small>error message</small>
+                            </div>
+                            <div class="form_group">
+                                <label for="qtt">Quantity</label>
+                                <input type="text" class="form_control" id="qtt">
+                                <small>error message</small>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <label for="message">Description</label>
+                            <input type="text" name="" style="display: none;" id="">
+                            <textarea name="message" type="text" class="form_control" id="message" cols="30" rows="10"
+                                placeholder="Write about your product..."></textarea>
+                            <small>error message</small>
+                        </div>
+                    </section>
+                    <section class="right">
+                        <section class="right_container">
+                            <div class="form_group">
+                                <p>
+                                    <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                                        style="display: none" />
+                                </p>
+                                <div class="btn">
+                                    <label for="file"  style="cursor: pointer">Upload Image</label>
+                                </div>
+                                <span>or</span>
+                                <div class="link_container">
+                                    <input class="form_control image_link" type="url" id="image-input" placeholder="Paste URL"/>
+                                    <div class="btn button_preview" id="btn">Preview</div>
+                                </div>
+                            </div>
+                            <div class="image_preview">
+                                <img id="output" />
+                            </div>
+                        </section>
+                    </section>
+                </section>
+                <div class="button_container">
+                    <button id="add">Add Product</button>
+                </div>
+            </form>
+        </section>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>
