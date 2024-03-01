@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAZON.COM</title>
+    <link rel="stylesheet" href="amazon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section id="amaForm">
+        <img src="images/Amazon_(company)-Logo.wine.svg" alt="">
+        <div id="mainContainer">
+            <div id="myH1">
+                <h1>Create Your Account</h1>
+            </div>
+            <div id="inputContainer">
+                <label id="myLabel">Username</label><br>
+                <input type="text" placeholder="First and Last name" required>
+            </div>
+            <div id="inputContainer">
+                <label id="myLabel">Email</label><br>
+                <input type="email" id="lhs" placeholder="Example123@gmail.com" required><br>
+                <span id="emailerro"></span>
+            </div>
+            <div id="inputContainer">
+                <label id="myLabel">Password</label><br>
+                <input type="password" id="lol" placeholder="" required>
+                <i class="fa-solid fa-eye eye1" onclick="eyeoperators()"></i>
+            </div>
+            <div id="inputContainer">
+                <label id="myLabel">Re-enter password</label><br>
+                <input type="password" id="pop" placeholder="" required><br>
+                <span id="conerro"></span>
+                <i class="fa-solid fa-eye eye2" onclick="eyeme()"></i>
+            </div>
+            <div id="mySubmit">
+                <button onclick="hub()">Continue</button>
+            </div>
+            <p id="myP2">
+                By creating an account, you agree to Amazon's <br> <a href="terms.html">Conditions</a> and <a href="terms.html">Privacy Notice</a>
+            </p>
+            <div id="myP">
+                Already have an account?<a href="register.html">Login</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="amazon.js"></script>
+</body>
+
+</html>
