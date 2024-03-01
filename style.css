@@ -6,6 +6,10 @@ body {
   font-family: 'poppins';
   /* background-color: ; */
 }
+.products-container{
+  transform: translatey(-4em);
+  z-index: 10;
+}
 
 .products-f {
   display: grid;
@@ -151,7 +155,7 @@ body {
   color: gold;
 }
 
-button {
+.products-container button {
   width: 100%;
   padding: .8em;
   margin: 1em 0 1em 0;
@@ -165,7 +169,7 @@ button {
   transition: .5s;
 }
 
-button:hover {
+.products-container button:hover {
   background-color: #f9b509;
 }
 
@@ -318,7 +322,7 @@ button:hover {
 }
 .left .products-carousel {
   /* width: 100%; */
-  height: 300px;
+  height: fit-content;
   position: relative;
   transition: .4s;
   border-radius: 5px;
@@ -333,7 +337,8 @@ button:hover {
   
 }
 .left img{
-  width: 100%;
+  width: 60%;
+  object-fit: contain;
 
 }
 
@@ -438,6 +443,27 @@ div.img-logo img {
     height: 100%;
     object-fit: cover;
 }
+/*
+==============================
+STYLES FOR THE DROP DOWN LIST
+==============================
+*/
+select{
+    width: 57px;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color:rgba(228, 226, 226, 0.854);
+    box-shadow: 0 0 10px 0 #000;
+    z-index: 10;
+}
+select:focus{
+    outline: 2px solid orange;
+}
+select option{
+    padd: 50px;
+    background-color: #0000003a;
+}
 
 /* INPUT BAR */
 div.search {
@@ -494,6 +520,7 @@ div.first-icon {
     background-color: rgba(228, 226, 226, 0.854);
     cursor: pointer;
     border-radius: 5px 0 0 5px;
+    outline: 1px solid red;
 
 }
 div.first-icon i {
@@ -583,6 +610,112 @@ li.return {
 li.sign-in:hover i {
     color: #ffffff97;
 }
+/*
+=====================
+sign-in features
+===================== 
+ */
+ .flex{
+    display: flex;
+ }
+ .black{
+    color: #000;
+    margin: 0.7rem 0;
+    /* outline: 1px solid red; */
+ }
+ .white-outline:hover{
+    outline: 1px solid #fff;
+ }
+ 
+ .container{
+    width: 90%;
+    height: 95%;
+    margin: auto;
+    margin-top: 2%;
+    background-color: transparent;
+    /* outline: 1px solid green; */
+    border-radius: 10px;
+    /* position: relative; */
+}
+ .absolute-cover{
+    display: none;
+}
+
+li.sign-in:hover  .absolute-cover{ 
+    display: block;
+    position: absolute;
+    top: 5;
+    left: 0;
+    background-color: #0e0d0d8c;
+    /* background-color: #fff; */
+    backdrop-filter: blur(7px);
+    width: 100% ;
+    height: 110vh;
+    z-index: 20;
+    /* outline: 1px solid red; */
+
+}
+.absolute-dropdown{
+    position: absolute;
+    top: 1rem;
+    right: 5rem;
+    display: block;
+    /* transition-duration: 2s; */
+    /* object-fit: cover; */
+    width: 36rem;
+    height: 80vh;
+    padding:  0 ;
+    background-color: #fff;
+    /* outline: 1px   solid red; */
+}
+.top-absolute-dropdown{
+    width: 100%;
+    height: 13%;
+    /* background-color: pink; */
+    margin-top: -4px;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.163);
+}
+.btn-sign{
+    display: block;
+    margin: auto;
+    margin-bottom: 0.4rem;
+    width: 60%;
+    height: 50%;
+    background-color: yellow;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 2.9;
+    font-size: .8rem;
+    font-weight: 500;
+    color: black;
+}
+.top-absolute-dropdown p{
+    text-align: center;
+    color: #000000d4;
+    font-weight: 0;   
+}
+.top-absolute-dropdown .start-here:hover,
+.black:hover{
+      text-decoration: underline;
+}
+.main-absolute-dropdown{
+    width: 100%;
+    height: 88%;
+    /* background-color: grey; */
+}
+.main-absolute-dropdown > div{
+    width: 50%;
+    height: 100%;
+}
+.main-absolute-dropdown-left{
+    background-color: transparent;
+    border-right: 1px solid  rgba(0, 0, 0, 0.163);
+}
+.main-absolute-dropdown-right{
+    /* background-color: blue; */
+    padding-left: 0.6rem;
+}
 li.return {
     margin: 0 15px;
     /* font-size: 18px; */
@@ -610,6 +743,35 @@ li.cart-shopping p {
     width: 20px;
     text-align: center;
 }
+/*  
+==========================
+CATATORY STYLES
+==========================
+  */
+.nav-bar-categories {
+    display: flex;
+    padding: 0.5em;
+    gap: 1em;
+    align-items: center;
+    font-size: 15px;
+    padding-left: 40px;
+    
+}
+.nav-bar-categories  p {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: sans-serif;
+}
+.fa-bars{
+    transform: translateY(1px);
+    cursor: pointer;
+    color: white;
+}
+.nav-bar-categories  p:hover {
+    text-decoration: underline;
+
 
 div.toggle-search-bar {
     position: absolute;
@@ -691,7 +853,6 @@ div.scroll-to-top i {
 .hmbg-categories p:hover {
     text-decoration: underline;
 }
-
 
 
 /* TODO: RESPONSIVE */
@@ -909,4 +1070,58 @@ div.scroll-to-top i {
     div.hmbg-search {
         opacity: 1;
     }
+}
+
+
+@media screen and (max-width:500px) {
+ *{
+  font-size: 14px;
+ }
+  
+.products-f {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+.products:first-child {
+  grid-column: span 1;
+  flex-direction: column !important;
+  align-items: center;
+}
+.products:first-child button {
+  position: relative;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+}
+.carousel-container{
+  width: 350px;
+  align-items: center;
+  margin: auto;
+}
+.w-products{
+  flex-direction: column;
+}
+.w-products .left{
+  width: 100%;
+  
+}
+button{
+  font-size: 12px;
+}
+.products:first-child .description{
+font-size: 13px;
+}
+.description{
+  font-size: 13px;
+}
+.w-products .right .right-products .description{
+font-size: 13px;
+  
+}
+.w-products .right .right-products {
+gap: 1em;
+}
+.products-container{
+  transform: translatey(0);
+}
 }
