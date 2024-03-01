@@ -7,6 +7,10 @@ body {
   font-family: 'poppins';
   /* background-color: ; */
 }
+.products-container{
+  transform: translatey(-4em);
+  z-index: 10;
+}
 
 .products-f {
   display: grid;
@@ -832,5 +836,8 @@ font-size: 13px;
 }
 .w-products .right .right-products {
 gap: 1em;
+}
+.products-container{
+  transform: translatey(0);
 }
 }
