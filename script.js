@@ -46,7 +46,7 @@ fetch('https://fakestoreapi.com/products')
   .then(products => {
 
     // Select 10 products
-    const carouselProducts = products.slice(8, 16);
+    const carouselProducts = products.slice(7, 17);
 
     // Select 2 products
     

@@ -85,7 +85,7 @@ body {
   color: gold;
 }
 
-button {
+.products-container button {
   width: 100%;
   padding: .8em;
   margin: 1em 0 1em 0;
@@ -99,7 +99,7 @@ button {
   transition: .5s;
 }
 
-button:hover {
+.products-container button:hover {
   background-color: #f9b509;
 }
 
@@ -252,7 +252,7 @@ button:hover {
 }
 .left .products-carousel {
   /* width: 100%; */
-  height: 300px;
+  height: fit-content;
   position: relative;
   transition: .4s;
   border-radius: 5px;
@@ -267,10 +267,61 @@ button:hover {
   
 }
 .left img{
-  width: 100%;
+  width: 60%;
+  object-fit: contain;
 
 }
 
 .w-products .right div{
   max-width: 100% !important;
+}
+
+@media screen and (max-width:500px) {
+ *{
+  font-size: 14px;
+ }
+  
+.products-f {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+.products:first-child {
+  grid-column: span 1;
+  flex-direction: column !important;
+  align-items: center;
+}
+.products:first-child button {
+  position: relative;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+}
+.carousel-container{
+  width: 350px;
+  align-items: center;
+  margin: auto;
+}
+.w-products{
+  flex-direction: column;
+}
+.w-products .left{
+  width: 100%;
+  
+}
+button{
+  font-size: 12px;
+}
+.products:first-child .description{
+font-size: 13px;
+}
+.description{
+  font-size: 13px;
+}
+.w-products .right .right-products .description{
+font-size: 13px;
+  
+}
+.w-products .right .right-products {
+gap: 1em;
+}
 }
