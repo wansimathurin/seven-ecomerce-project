@@ -29,7 +29,7 @@
                             </div>
                             <div class="form_group">
                                 <label for="qtt">Quantity</label>
-                                <input type="text" class="form_control" id="qtt" />
+                                <input type="text" class="form_control" id="qtt">
                                 <small>error message</small>
                             </div>
                         </div>
@@ -42,27 +42,29 @@
                         </div>
                     </section>
                     <section class="right">
-                        <div class="form_group">
-                            <p>
-                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
-                                    style="display: none" />
-                            </p>
-                            <button>
-                                <label for="file" style="cursor: pointer">Upload Image</label>
-                            </button>
-                            <span>or</span>
-                            <div class="link_container">
-                                <input type="text" class="form_control image_link" id="image_link" placeholder="Paste URL"/>
-                                <button class="button_preview">Preview</button>
+                        <section class="right_container">
+                            <div class="form_group">
+                                <p>
+                                    <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                                        style="display: none" />
+                                </p>
+                                <div class="btn">
+                                    <label for="file"  style="cursor: pointer">Upload Image</label>
+                                </div>
+                                <span>or</span>
+                                <div class="link_container">
+                                    <input class="form_control image_link" type="url" id="image-input" placeholder="Paste URL"/>
+                                    <div class="btn button_preview" id="btn">Preview</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="image_preview">
-                            <img id="output" />
-                        </div>
+                            <div class="image_preview">
+                                <img id="output" />
+                            </div>
+                        </section>
                     </section>
                 </section>
                 <div class="button_container">
-                    <button>Add Product</button>
+                    <button id="add">Add Product</button>
                 </div>
             </form>
         </section>

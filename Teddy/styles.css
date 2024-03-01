@@ -100,12 +100,19 @@ textarea {
   align-items: center;
 }
 
+.right .link_container {
+  display: flex;
+  justify-content: center;
+}
+
 .image_preview {
   background-color: white;
   border-radius: 10px;
   border: 0.6px solid rgb(206, 212, 218);
   width: 90%;
   min-height: 250px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 /* button */ 
@@ -117,7 +124,8 @@ textarea {
   justify-content: center;
 }
 
-button {
+button,
+.btn {
   display: inline-block;
   color: white;
   background-color: black;
@@ -126,12 +134,19 @@ button {
   margin: 0 auto;
 }
 
+.button_preview {
+  margin: 0;
+  margin-left: 15px;
+}
+
 .form_group.success input,
+/* .form_group.success textarea, */
 .form {
 	border-color: #2ecc71;
 }
 
-.form_group.error input {
+.form_group.error input,
+.form_group.error textarea {
 	border-color: #e74c3c;
 }
 

@@ -2,8 +2,36 @@ const form = document.querySelector(".form");
 const p_name = document.getElementById("p_name");
 const price = document.getElementById("price");
 const qty = document.getElementById("qtt");
-const desc = document.querySelector("#message")
-const imagescr = document.querySelector("img").src;
+const desc = document.querySelector("#message") 
+
+var image = document.getElementById('output');
+
+// this code helps upload image from the computer
+
+var loadFile = function (event) {
+    image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+// previezing image through link
+
+// var image = new Image();
+//     image.src = document.addEventListener("click", function preview(){
+//         document.getElementById("image_link").value
+//     });
+    
+//     // The URL isn't valid or the resource isn't a picture
+//     image.onerror = function() { alert("Provided URL does not point to a valid picture.") };
+    
+//     // Ok, we have correct picture; display it
+//     image.onload = function() {
+//         document.getElementById("output").src = image.src;
+//     };
+
+    document.getElementById("btn").addEventListener("click", e => {
+        let imageInput = document.getElementById("image-input");
+        let image = document.getElementById("output");
+        if (imageInput.value) image.src = imageInput.value;
+      });
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -11,12 +39,21 @@ form.addEventListener('submit', e => {
     checkInputs();
 });
 
+
 function checkInputs() {
+
     const nameValue = p_name.value.trim();
     const priceValue = price.value.trim();
     const qtyValue = qty.value.trim();
     const descValue = desc.value.trim();
 
+    var table = {
+        title: nameValue,
+            price: priceValue,
+            product_qty: qtyValue,
+            description: descValue,
+            image: image.src
+    }
 
     if (nameValue === '') {
         setErrorFor(p_name, 'Product name cannot be blank');
@@ -48,16 +85,23 @@ function checkInputs() {
         setSuccessFor(desc);
     }
 
-    var data = {
-        'product_name': nameValue,
-        'product_price': priceValue,
-        'product_qty': qtyValue,
-        'product_desc': descValue,
-        'product_image': imagescr,
-    }
+    fetch('https://fakestoreapi.com/products', {
+    method: "POST",
+    body: JSON.stringify(
+        {
+            title: nameValue,
+            price: priceValue,
+            product_qty: qtyValue,
+            description: descValue,
+            image: image.scr
+        }
+    )
+})
+    .then(res => res.json())
+    .then(json => console.log(json))
 
-    console.table(data)
-
+    console.table(table)
+    localStorage.setItem('table', JSON.stringify(table))
 }
 
 function setErrorFor(input, message) {
@@ -72,30 +116,3 @@ function setSuccessFor(input) {
     formControl.className = 'form_group success';
 }
 
-// this code helps upload image from the computer
-
-var loadFile = function (event) {
-    var image = document.getElementById('output');
-    image.src = URL.createObjectURL(event.target.files[0]);
-};
-
-// using links
-
-document.querySelector(".button_preview").addEventListener('click', function preview() {
-
-    var img = new Image();
-    img.src = document.getElementById("image_link").value;
-    
-    // The URL isn't valid or the resource isn't a picture
-    img.onerror = function() { alert("Provided URL does not point to a valid picture.") };
-    
-    // Ok, we have correct picture; display it
-    img.onload = function() {
-        document.getElementById("output").src = img.src;
-    };
-
-})
-
-    
-
-// 
