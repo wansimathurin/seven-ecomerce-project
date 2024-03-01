@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    text-decoration: none;
 }
 * {
     padding: 0;
@@ -163,9 +164,28 @@ div.search {
     text-align: center;
     height: 100%;
     width: 700px;
-    padding: 10px 0;
+    padding: 10px 0;    
     /* background-color: greenyellow; */
 }
+/*
+==============================
+STYLES FOR THE DROP DOWN LIST
+==============================
+*/
+select{
+    width: 57px;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+select:focus{
+    outline: 2px solid orange;
+}
+select option{
+    /* margin: 50px; */
+    background-color: #0000003a;
+}
+
 div.hmbg-search {
     display: none;
 }
@@ -310,13 +330,121 @@ li.sign-in i {
 }
 li.sign-in,
 li.return {
-    color: #fff;
+    color: red;
     cursor: pointer;
     font-size: 14px;
+    /* outline: 1px solid red; */
 }
 li.sign-in:hover i {
     color: #ffffff97;
 }
+/*
+=====================
+sign-in features
+===================== 
+ */
+ .flex{
+    display: flex;
+ }
+ .black{
+    color: #000;
+    margin: 0.7rem 0;
+    /* outline: 1px solid red; */
+ }
+ .white-outline:hover{
+    outline: 1px solid #fff;
+ }
+ 
+ .container{
+    width: 90%;
+    height: 95%;
+    margin: auto;
+    margin-top: 2%;
+    background-color: transparent;
+    /* outline: 1px solid green; */
+    border-radius: 10px;
+    /* position: relative; */
+}
+ .absolute-cover{
+    display: none;
+}
+
+li.sign-in:hover  .absolute-cover{ 
+    display: block;
+    position: absolute;
+    top: 5;
+    left: 0;
+    background-color: #0e0d0d8c;
+    /* background-color: #fff; */
+    backdrop-filter: blur(7px);
+    width: 100% ;
+    height: 110vh;
+    z-index: 20;
+    /* outline: 1px solid red; */
+
+}
+.absolute-dropdown{
+    position: absolute;
+    top: 1rem;
+    right: 5rem;
+    display: block;
+    /* transition-duration: 2s; */
+    /* object-fit: cover; */
+    width: 36rem;
+    height: 80vh;
+    padding:  0 ;
+    background-color: #fff;
+    /* outline: 1px   solid red; */
+}
+.top-absolute-dropdown{
+    width: 100%;
+    height: 13%;
+    /* background-color: pink; */
+    margin-top: -4px;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.163);
+}
+.btn-sign{
+    display: block;
+    margin: auto;
+    margin-bottom: 0.4rem;
+    width: 60%;
+    height: 50%;
+    background-color: yellow;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 2.9;
+    font-size: .8rem;
+    font-weight: 500;
+    color: black;
+}
+.top-absolute-dropdown p{
+    text-align: center;
+    color: #000000d4;
+    font-weight: 0;   
+}
+.top-absolute-dropdown .start-here:hover,
+.black:hover{
+      text-decoration: underline;
+}
+.main-absolute-dropdown{
+    width: 100%;
+    height: 88%;
+    /* background-color: grey; */
+}
+.main-absolute-dropdown > div{
+    width: 50%;
+    height: 100%;
+}
+.main-absolute-dropdown-left{
+    background-color: transparent;
+    border-right: 1px solid  rgba(0, 0, 0, 0.163);
+}
+.main-absolute-dropdown-right{
+    /* background-color: blue; */
+    padding-left: 0.6rem;
+}
+
 li.return {
     margin: 0 15px;
     /* font-size: 18px; */
