@@ -133,7 +133,7 @@
             </div>
     
         </div>
-        <div  class="nav-bar-categories " >
+        <div  class="nav-bar-categories" >
             <i class="fas fa-bars"></i>
         </div>
     </div>
@@ -206,10 +206,10 @@
             </ul>
         </div>
         <div class= "hmbg-categories" >
+            <p></p>
         </div>
     </div>
     <div class="hamburger-menu">
-        <!-- <img class="hmgr-img" src="/image/hmbrg_menu-removebg-preview.png" alt=""> -->
         <i class="fa-solid fa-bars hmgr-img"></i>
     </div>
     <div class="scroll-to-top">
@@ -227,13 +227,13 @@
     
 
 
-    var category = document.querySelector('.hmbg-categories')
+    var categories = document.querySelector('.hmbg-categories')
 function hmbgCategory() { 
   fetch("https://fakestoreapi.com/products/categories")
   .then((result) => result.json())
   .then((products) => {
-    category.innerHTML = products.map(categories=>{
-     return `<p class="line">${categories}</p>`
+    categories.innerHTML = products.map(categories=>{
+     return `<p>${categories}</p>`
     }).join(" ")
   });
 }
@@ -277,7 +277,7 @@ function getCategory() {
   .then((result) => result.json())
   .then((products) => {
     category.innerHTML += products.map(categories=>{
-     return ` <p class="line">${categories}</p>`
+     return `<p class="line">${categories}</p>`
     }).join(" ")
   });
 }
@@ -319,7 +319,7 @@ function lightMode() {
     document.querySelector('.search-bar').style.boxShadow = '0 0 5px 0 #000';
     document.querySelector('.icon').style.boxShadow = '0 0 5px 0 #000';
     document.querySelector('.header-navbar').style.background = '#fff';
-    document.querySelector('.header-navbar').style.boxShadow = '0 0 5px 0 #888';
+    // document.querySelector('.header-navbar').style.boxShadow = '0 0 5px 0 #888';
     document.querySelector('div.nav-links ul li.sign-in').style.color = '#000';
     document.querySelector('div.nav-links ul li.return').style.color = '#000';
     document.querySelector('.hmgr-img').style.color = "#000";
