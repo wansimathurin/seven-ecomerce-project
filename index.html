@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +17,6 @@
 
 
 <body>
-
-  
-
-
     <div class="navbar">
         <div class="header-navbar">
             <div class="logo">
@@ -29,7 +24,7 @@
                     <img src="/image/Amazon-Logo-Font-1-scaled.webp" alt="">
                 </div>
                 <div class="toggle-theme">
-                    <i onclick="lightMode()" class="fa fa-toggle-off"></i>
+                    <i onclick="lightMode()" class="fa  fa-toggle-off"></i>
                 </div>
             </div>
                 <div class="search">
@@ -63,6 +58,7 @@
                        <option value="commonBgColor">Toys &amp; Games</option>
                     </select>
                 <input type="search" class="search-bar" placeholder="search Amazon">
+
                 <div class="icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
@@ -124,6 +120,18 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="toggle-search-bar">
+                <div class="first-icon">
+                    All
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <input type="search" class="search-bar" placeholder='SEARCH BY "NAME" or "CATEGORIES"'>
+                <div class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+    
         </div>
         <div  class="nav-bar-categories " >
             <i class="fas fa-bars"></i>
@@ -174,7 +182,7 @@
                 All
                 <i class="fa-solid fa-caret-down"></i>
             </div>
-            <input type="search" class="hmbg-search-bar">
+            <input type="search" class="hmbg-search-bar" placeholder='SEARCH BY "NAME" or "CATEGORIES"'>
             <div class="hmbg-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
@@ -197,10 +205,17 @@
                 </li>
             </ul>
         </div>
+        <div class= "hmbg-categories" >
+        </div>
     </div>
     <div class="hamburger-menu">
-        <img class="hmgr-img" src="/image/hmbrg_menu-removebg-preview.png" alt="">
+        <!-- <img class="hmgr-img" src="/image/hmbrg_menu-removebg-preview.png" alt=""> -->
+        <i class="fa-solid fa-bars hmgr-img"></i>
     </div>
+    <div class="scroll-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
 
 
 
@@ -211,6 +226,48 @@
     AOS.init();
     
 
+
+    var category = document.querySelector('.hmbg-categories')
+function hmbgCategory() { 
+  fetch("https://fakestoreapi.com/products/categories")
+  .then((result) => result.json())
+  .then((products) => {
+    category.innerHTML = products.map(categories=>{
+     return `<p class="line">${categories}</p>`
+    }).join(" ")
+  });
+}
+hmbgCategory();
+
+// api integration
+
+var container = document.querySelector('.card-container');
+function getProducts() {
+  fetch("https://fakestoreapi.com/products")
+    .then((result) => result.json())
+    .then((products) => {
+      container.innerHTML = products.map(product=>{
+        return ` <div class="card">
+            <div class="image-content">
+                <img src="${product.image}" width="100%" height="100%">
+            </div>
+            <div class="desc">
+                <h3 class="title">${product.title.slice(0,20)}...</h3>
+                 <h4>${product.price} XAF</h4>
+                 <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                 </div>
+                 <p class="description">${product.description.slice(0,90)}</p>
+            </div>
+            <button class="addToCart">Add to basket</button>
+        </div>`
+      }).join(" ") 
+    });
+};
+getProducts();
 
 
 // CATATORY STYLES
@@ -224,8 +281,10 @@ function getCategory() {
     }).join(" ")
   });
 }
-
  getCategory();
+
+    
+// TODO: HAMBERGER MENU
 
 var hmbgMenu = document.querySelector('.hmgr-img');
 var hmbgBox = document.querySelector('.hmbg-menu');
@@ -237,11 +296,11 @@ hmbgMenu.addEventListener('click', function() {
 // TODO: Afficher la barre de recherche dans le hamburger menu
 
 var searchMenu = document.querySelector('div.search-logo i.fa-solid');
-var divBox = document.querySelector('div.hmbg-search');
+var divBox = document.querySelector('div.toggle-search-bar');
 
 searchMenu.addEventListener('click', function() {
-  divBox.classList.toggle('show-hmbg-search');
-})
+  divBox.classList.toggle('show-search-bar');
+});
 
 // TODO: Changement de themes
 
@@ -263,6 +322,7 @@ function lightMode() {
     document.querySelector('.header-navbar').style.boxShadow = '0 0 5px 0 #888';
     document.querySelector('div.nav-links ul li.sign-in').style.color = '#000';
     document.querySelector('div.nav-links ul li.return').style.color = '#000';
+    document.querySelector('.hmgr-img').style.color = "#000";
     document.querySelector('div.nav-links ul li.cart-shopping i').style.color = '#000';
     document.querySelector('div.img-logo img').src = '/image/Amazon-logo-removebg-preview.png';
   } else {
@@ -273,6 +333,7 @@ function lightMode() {
     document.querySelector('div.nav-links ul li.sign-in').style.color = '#fff';
     document.querySelector('div.nav-links ul li.return').style.color = '#fff';
     document.querySelector('div.nav-links ul li.cart-shopping i').style.color = '#fff';
+    document.querySelector('.hmgr-img').style.color = "#fff";
     document.querySelector('div.img-logo img').src = '/image/Amazon-Logo-Font-1-scaled.webp';
   }
   
@@ -295,6 +356,7 @@ if (getStore === "WHITE") {
     document.querySelector('div.nav-links ul li.sign-in').style.color = '#000';
     document.querySelector('div.nav-links ul li.return').style.color = '#000';
     document.querySelector('div.nav-links ul li.cart-shopping i').style.color = '#000';
+    document.querySelector('.hmgr-img').style.color = "#000";
     document.querySelector('div.img-logo img').src = '/image/Amazon-logo-removebg-preview.png';
 } else {
     toggleTheme.style.color = '#fff';
@@ -302,8 +364,29 @@ if (getStore === "WHITE") {
     document.querySelector('.sign-in').style.color = '#fff';
     document.querySelector('.return').style.color = '#fff';
     document.querySelector('.cart-shopping i').style.color = '#fff';
+    document.querySelector('.hmgr-img').style.color = "#fff";
     document.querySelector('.img-logo img').src = '/image/Amazon-Logo-Font-1-scaled.webp';
 }
+
+// TODO: Bouton scrollTOTop
+// Pour que le bouton apparaisse a un moment donne
+var scrollBtn = document.querySelector('.scroll-to-top');
+
+window.addEventListener('scroll', function() {
+    // console.log(window.scrollY);
+    if (window.scrollY > 100) {
+        scrollBtn.style.display = 'flex';
+        scrollBtn.style.transition = '1s';
+    } else if (window.scrollY < 100){
+        scrollBtn.style.display = 'none';
+        scrollBtn.style.transition = '1s';
+    }
+});
+
+// La partie cliquable
+scrollBtn.addEventListener('click', function() {
+    window.scrollTo(0,0);
+})
 
 
     </script>
