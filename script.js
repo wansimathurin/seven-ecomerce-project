@@ -171,7 +171,7 @@ function stars() {
 
 }
 
-getProducts();
+
 
 
 var hmbgMenu = document.querySelector('.hmgr-img');
