@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#amaForm img {
+    width: 150px;
+    margin-left: 90px;
+}
+
+#mainContainer {
+    padding: 1em 3em;
+    gap: 0 2em;
+    color: #000;
+    border-radius: 8px;
+    border: 1px solid black;
+    box-shadow: 0 0 4px;
+}
+
+#myH1 {
+    padding-bottom: 25px;
+}
+
+#inputContainer {
+    padding-bottom: 15px;
+    position: relative;
+}
+::placeholder{
+    padding-left: 5px;
+}
+#inputContainer input {
+    width: 250px;
+    height: 33px;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+#inputContainer i{
+    position: absolute;
+    right: 7px;
+    top: 23px;
+    cursor: pointer;
+}
+span{
+    color: red;
+    font-size: x-small;
+    
+    }
+#mySubmit button {
+    width: 250px;
+    height: 33px;
+    border-radius: 10px;
+    background-color: yellow;
+    color: #000;
+    cursor: pointer;
+}
+#myP2{
+    font-size: 13px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+#myP {
+    padding-top: 10px;
+}
