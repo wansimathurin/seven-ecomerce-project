@@ -787,6 +787,10 @@ div.toggle-search-bar {
     justify-content: center;
     /* background-color: pink; */
 }
+div.toggle-search-bar .first-icon {
+  background-color: #fff;
+  outline: none;
+}
 div.toggle-search-bar input {
     width: 600px;
     outline: none;
@@ -950,7 +954,7 @@ div.scroll-to-top i {
         height: 100%;
         align-items: center;
         border-radius: 0 5px 5px 0;
-        box-shadow: 0 0 3px 0 #999;
+        box-shadow: 0 0 5px 0 #000;
         background-color: rgba(255, 166, 0, 0.92);
         cursor: pointer;
     }
@@ -968,12 +972,12 @@ div.scroll-to-top i {
         padding: 0 10px;
         font-size: 14px;
         align-items: center;
-        box-shadow: 5px orangered;
+        box-shadow: 0 0 5px 0 #000;
         border-right: 1px solid #000000b3;
-        background-color: rgba(228, 226, 226, 0.854);
+        background-color: #fff;
         cursor: pointer;
         border-radius: 5px 0 0 5px;
-    
+        z-index: 999;
     }
     div.hmbg-first-icon i {
         text-align: center;
