@@ -1,4 +1,10 @@
 {
+<<<<<<< HEAD
     "nuxt.isNuxtApp": false,
+
     "liveServer.settings.port": 5502
+
+=======
+    "nuxt.isNuxtApp": false
+>>>>>>> parent of 0e5ea3e (complete Content Page)
 }
