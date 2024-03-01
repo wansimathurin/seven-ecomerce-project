@@ -1,3 +1,4 @@
+
 // import { carouselStuff } from "./carousel.js";
 
 const productContainer = document.querySelector('.products-f');
