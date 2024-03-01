@@ -771,7 +771,7 @@ CATATORY STYLES
 }
 .nav-bar-categories  p:hover {
     text-decoration: underline;
-
+}
 
 div.toggle-search-bar {
     position: absolute;
@@ -829,7 +829,6 @@ div.scroll-to-top i {
     align-items: center;
     font-size: 15px;
     /* background-color: rgba(255, 0, 0, 0.539); */
-    /* color: #000; */
     width: 100%;
     height: fit-content;
     text-align: center;
@@ -1061,6 +1060,9 @@ div.scroll-to-top i {
     }
     div.search-logo {
         display: none;
+    }
+    .nav-bar-categories {
+      display: none;
     }
 }
 
