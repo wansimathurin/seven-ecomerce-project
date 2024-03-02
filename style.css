@@ -10,57 +10,17 @@
 }
 
 .popParent {
-    width: 75%;
+    max-width: 90%;
+    width: 79%;
     height: auto;
     background-color: #264653;
     position: absolute;
     z-index: 7;
-    left: 13%;
+    left: 9%;
+    margin: auto;
     top: 10px;
     padding-top: 10px;
     border-radius: 6px;
-
-    & .displayPop {
-        height: 60%;
-        margin: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & .imPop {
-            width: 42%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            position: relative;
-
-            & h5 {
-                position: absolute;
-                top: 5px;
-                right: 30px;
-            }
-
-            & .imgSet {
-                width: 80%;
-                height: 340px;
-                overflow: hidden;
-                border-radius: 5px;
-                margin-top: 30px;
-
-            }
-        }
-
-        & .navPop {
-            width: 60%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-        }
-    }
 
     & .scrollPop {
         width: 97%;
@@ -72,22 +32,66 @@
         margin-top: 2%;
         overflow: hidden;
 
-        & .card {
-            margin: 10px 16px;
-            height: 100%;
-            width: 53%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            & img {
-                width: 219px;
-                height: 200px;
-                border-radius: 5px;
-
-            }
-        }
     }
+}
+
+ .card {
+    margin: 10px 16px;
+    height: 100%;
+    width: 53%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 219px;
+        height: 200px;
+        border-radius: 5px;
+
+    }
+}
+ .displayPop {
+    height: 60%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .imPop {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+
+    & h5 {
+        position: absolute;
+        top: 5px;
+        right: 30px;
+    }
+
+ 
+}
+
+& .navPop {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+ .imgSet {
+    width: 80%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 30px;
+
 }
 
 .nav {
@@ -106,9 +110,12 @@
     & .fa {
         transform: translateY(-140px);
         margin: auto;
-        color: #e0e0e0;
+        color: #143b52d7;
         border-radius: 30%;
     }
+.next {
+    transform: translate(-13px,-140px);
+}
 
  
 }
@@ -142,7 +149,7 @@
 .detailsSet {
     margin-left: 20px;
     margin-right: 25px;
-    max-width: 500px;
+    /* max-width: 500px; */
     max-height: 500px;
     overflow: auto;
 
@@ -178,9 +185,43 @@
     color: #a19f9f;
 }
 
-.levels:hover {
-    background-color: rgb(240, 213, 93);
-    width: 100px;
-    height: 20px;
-    border-radius: 3px;
+/* 
+==========================================
+Screen sizing
+==========================================
+ */
+
+ @media all and (width < 868px) {
+
+    .popParent  {
+        margin: auto;
+    }
+    .displayPop {
+        flex-direction: column;
+    }
+
+    .navPop {
+        width: 100%;
+    }
+
+    .imPop {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+   
+  .imgSet {
+    width: 100%;
+        height: 200px;
+    }
+
+    
+ .card {
+    margin: 10px 16px;
+    height: 90%;
+    width: 45%;
 }
+
+
+ }
+
+ 
