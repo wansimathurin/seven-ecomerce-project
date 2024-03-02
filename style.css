@@ -42,13 +42,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     & img {
-        width: 219px;
+        width: 220px;
         height: 200px;
         border-radius: 5px;
-
+        transition: all 0.24s linear;
     }
+}
+
+.card img:hover {
+    transform: scale(0.94);
 }
  .displayPop {
     height: 60%;
