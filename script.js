@@ -12,6 +12,7 @@ let carouselContent = '';
 let WContentLeft = '';
 let WContentRight = '';
 
+
 fetch('https://fakestoreapi.com/products')
 .then(products => products.json())
 .then(products => {

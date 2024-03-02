@@ -17,6 +17,11 @@ function popClose() {
     popUpCard.style.display = "none";
 }
 
+// shoWPopUp.addEventListener('click', ()=>{
+//     popUpCard.style.display = "block";
+// })
+
+
 //looping through cards 
 
 function activate(e) {
@@ -57,11 +62,7 @@ function popMenu() {
 
                     //calling the image to display
 
-                    // shoWPopUp.addEventListener('click', ()=>{
-                    //     popUpCard.style.display = "block";
-                    //     show.src = products[i].image;
-                    // })
-
+                   
                     // Product Rating set up
 
                     let star = `<i class="fas fa-star"></i>`
