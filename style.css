@@ -13,7 +13,7 @@
     max-width: 90%;
     width: 79%;
     height: auto;
-    background-color: #264653;
+    background-color: #495057;
     position: absolute;
     z-index: 7;
     left: 9%;
@@ -30,13 +30,17 @@
         align-items: center;
         margin: auto;
         margin-top: 2%;
-        overflow: hidden;
-
+        margin-left: 16px;
+        overflow: scroll;
+    }
+    .scrollPop::-webkit-scrollbar {
+        visibility: hidden;
+        visibility: collapse;
     }
 }
 
  .card {
-    margin: 10px 16px;
+    margin: 10px 16.5px;
     height: 100%;
     width: 53%;
     display: flex;
@@ -103,17 +107,17 @@
     gap: 80%;
 
     & .btn {
-        font-size: 50px;
+        font-size: 40px;
 
         &:hover {
-            background-color: rgba(255, 255, 255, 0.377);
+            background-color: rgba(255, 255, 255, 0.671);
         }
     }
 
     & .fa {
         transform: translateY(-140px);
         margin: auto;
-        color: #143b52d7;
+        color:  #252525;
         border-radius: 30%;
     }
 .next {
@@ -185,7 +189,7 @@
 .levels {
     font-size: 18px;
     font-family: Poppins;
-    color: #a19f9f;
+    color: #000;
 }
 
 /* 
