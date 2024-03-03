@@ -190,7 +190,7 @@
 }
 
 
-.levels {
+ .levels {
     font-size: 18px;
     font-family: Poppins;
     color: #000;
@@ -229,9 +229,14 @@ Screen sizing
 
 
     .card {
-        margin: 10px 16px;
+        margin: 10px 23px;
+        padding-left: 10px;
         height: 90%;
         width: 45%;
+            img {
+                width: 200px;
+                height: 160px;
+            }
     }
 
     .detailsSet {
@@ -257,6 +262,7 @@ Screen sizing
     .imgSet {
         width: 100%;
         height: 190px;
+        padding-top: 13px;
     }
 
     .card {
@@ -276,14 +282,27 @@ Screen sizing
     
 }
 
+
 @media all and (width < 320px) {
 
     .imPop {
         height: 70%;
     }    
-
-    .imgSet {
-        height: 140px;
+ 
+    .card {
+        margin: 10px 36px;
+        height: 90%;
+        width: 40%;
+        img {
+            width: 140px;
+            height: 150px;
+        }
     }
 
+    & .scrollPop {
+        width: 90%;
+        margin: auto;
+    }
+
+   
 }
