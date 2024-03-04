@@ -8,8 +8,9 @@ body {
   /* background-color: ; */
 }
 .products-container{
-  transform: translatey(-4em);
+  transform: translatey(-8em);
   z-index: 10;
+  position: relative;
 }
 
 .products-f {
