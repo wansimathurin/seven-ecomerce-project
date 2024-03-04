@@ -839,7 +839,5 @@ font-size: 13px;
 .w-products .right .right-products {
 gap: 1em;
 }
-.products-container{
-  transform: translatey(0);
-}
+
 }
