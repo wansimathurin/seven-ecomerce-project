@@ -1,4 +1,8 @@
- 
+import { cart,addToCart,saveToStorage,checkout,storedCartLength } from "./cart.js";
+
+const cartQuantity = document.querySelector('.cart-shopping p');
+
+let cartNumber = storedCartLength;
 // import { carouselStuff } from "./carousel.js";
 
 const productContainer = document.querySelector('.products-f');
@@ -36,11 +40,27 @@ fetch('https://fakestoreapi.com/products')
           <div class="description">${product.description.slice(0, 121)}....</div>
           <div class="price">$${product.price.toFixed(2)}</div>
         </div>
-        <button>Add to basket</button>
+        <button data-product-id="${product.id}">Add to basket</button>
       </div>`;
     });
 
     productContainer.innerHTML = HtmlContent;
+    const buttonElement = document.querySelectorAll('.products button');
+
+        buttonElement.forEach(btn => {
+            const productId = btn.dataset.productId;
+            
+            btn.addEventListener('click', () => {
+                addToCart(productId);
+                cartNumber++;
+                cartQuantity.innerHTML = cartNumber;
+                
+
+            })
+        })
+
+
+
 
     return fetch('https://fakestoreapi.com/products');
   })
@@ -74,7 +94,7 @@ fetch('https://fakestoreapi.com/products')
           <div class="description">${product.description.slice(0, 130)}...</div>
         </div>
         <div class="price">$${product.price.toFixed(2)}</div>
-        <button>Add to basket</button>
+        <button data-product-id="${product.id}">Add to basket</button>
       </div>
       `;
     });
@@ -93,7 +113,7 @@ fetch('https://fakestoreapi.com/products')
         ${stars()}
         </div>
         <div class="price">$${product.price.toFixed(2)}</div>
-        <button>Add to basket</button>
+        <button data-product-id="${product.id}>Add to basket</button>
       </div>
       </div>
     </div>`;
@@ -112,7 +132,7 @@ fetch('https://fakestoreapi.com/products')
         <div class="description">${lastElement.description.slice(0, 130)}...</div>
         <div class="price">$${lastElement.price.toFixed(2)}</div>
       </div>
-      <button>Add to basket</button>
+      <button data-product-id="${lastElement.id}">Add to basket</button>
     </div>`;
 
 
@@ -120,6 +140,19 @@ fetch('https://fakestoreapi.com/products')
     wProductContainerLeft.innerHTML = WContentLeft;
     wProductContainerRight.innerHTML = WContentRight;
 
+    const buttonElement = document.querySelectorAll('.products-carousel button');
+
+    buttonElement.forEach(btn => {
+        const productId = btn.dataset.productId;
+
+        btn.addEventListener('click', () => {
+            addToCart(productId);
+            cartNumber++;
+            cartQuantity.innerHTML = cartNumber;
+        })
+    })
+
+   
     const slides = document.querySelectorAll('.carousel div');
 
     let intervalId;
@@ -199,3 +232,5 @@ $(document).ready(function(){
   })
 })
 
+
+cartQuantity.innerHTML = storedCartLength;
