@@ -7,8 +7,9 @@ body {
   /* background-color: ; */
 }
 .products-container{
-  transform: translatey(-4em);
+  transform: translatey(-8em);
   z-index: 10;
+  position: relative;
 }
 
 .products-f {
@@ -1127,7 +1128,5 @@ font-size: 13px;
 .w-products .right .right-products {
 gap: 1em;
 }
-.products-container{
-  transform: translatey(0);
-}
+
 }
